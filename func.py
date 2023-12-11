@@ -32,7 +32,7 @@ barang          = [['Abus sPRC91', '110091004', 'processor', 'pc', 19, 5700000],
                    ['Legi hVGA36', '640036004', 'vga', 'pc', 8, 3000000]]
 
 def path(filename):
-    return os.getcwd()+filename+'.txt'
+    return os.path.join(os.sys.path[0],filename+'.txt')
 
 def read(filename):
     file = open(filename, 'r')

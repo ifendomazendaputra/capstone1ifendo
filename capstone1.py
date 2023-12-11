@@ -1,6 +1,6 @@
 from func import *
 
-barang = read(path('barang'))
+# barang = read(path('barang'))
 # carts = read(path('carts'))
 
 clear(), print(sorotmenu(credit))

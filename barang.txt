@@ -1,24 +1,24 @@
-'Abus sPRC91', '110091004', 'processor', 'pc', 19, 5700000
-'Acep pPRC72', '120072004', 'processor', 'pc', 17, 4500000
-'Samung gPRC53', '130053004', 'processor', 'pc', 13, 3900000
-'Hepi hPRC94', '140094004', 'processor', 'pc', 11, 6200000
-'Abus sMOB31', '210031004', 'motherboard', 'pc', 6, 4400000
-'Acep pMOB32', '220032004', 'motherboard', 'pc', 12, 3600000
-'Samung gMOB33', '230033004', 'motherboard', 'pc', 9, 5100000
-'Hepi hMOB34', '240034004', 'motherboard', 'pc', 2, 3800000
-'Abus sMEM18', '310018004', 'ram', 'pc', 2, 2900000
-'Acep pMEM22', '320022004', 'ram', 'pc', 5, 1800000
-'Samung gMEM24', '330024004', 'ram', 'pc', 9, 3500000
-'Hepi hMEM16', '340016004', 'ram', 'pc', 12, 2400000
-'Abus sSTG11', '410011004', 'storage', 'pc', 18, 2800000
-'Acep pSTG21', '420021004', 'storage', 'pc', 15, 2500000
-'Samung gSTG11', '430011004', 'storage', 'pc', 7, 3100000
-'Hepi hSTG41', '440041004', 'storage', 'pc', 3, 2200000
-'Abus sLED25', '510025004', 'monitor', 'pc', 4, 3500000
-'Acep pLED24', '520024004', 'monitor', 'pc', 10, 2800000
-'Samung gLED27', '530027004', 'monitor', 'pc', 3, 5100000
-'Hepi hLED25', '540025004', 'monitor', 'pc', 20, 3000000
-'Abus sVGA39', '610039004', 'vga', 'pc', 15, 6200000
-'Acep pVGA37', '620037004', 'vga', 'pc', 14, 4500000
-'Samung gVGA29', '630029004', 'vga', 'pc', 10, 5900000
-'Hepi hVGA36', '640036004', 'vga', 'pc', 8, 3000000
+'Abus sPRC91','110091004','processor','pc',19,5700000
+'Acep pPRC72','120072004','processor','pc',17,4500000
+'Samung gPRC53','130053004','processor','pc',13,3900000
+'Hepi hPRC94','140094004','processor','pc',11,6200000
+'Abus sMOB31','210031004','motherboard','pc',6,4400000
+'Acep pMOB32','220032004','motherboard','pc',12,3600000
+'Samung gMOB33','230033004','motherboard','pc',9,5100000
+'Hepi hMOB34','240034004','motherboard','pc',2,3800000
+'Abus sMEM18','310018004','ram','pc',2,2900000
+'Acep pMEM22','320022004','ram','pc',5,1800000
+'Samung gMEM24','330024004','ram','pc',9,3500000
+'Hepi hMEM16','340016004','ram','pc',12,2400000
+'Abus sSTG11','410011004','storage','pc',18,2800000
+'Acep pSTG21','420021004','storage','pc',15,2500000
+'Samung gSTG11','430011004','storage','pc',7,3100000
+'Hepi hSTG41','440041004','storage','pc',3,2200000
+'Abus sLED25','510025004','monitor','pc',4,3500000
+'Acep pLED24','520024004','monitor','pc',10,2800000
+'Samung gLED27','530027004','monitor','pc',3,5100000
+'Hepi hLED25','540025004','monitor','pc',20,3000000
+'Abus sVGA39','610039004','vga','pc',15,6200000
+'Acep pVGA37','620037004','vga','pc',14,4500000
+'Samung gVGA29','630029004','vga','pc',10,5900000
+'Hepi hVGA36','640036004','vga','pc',8,3000000

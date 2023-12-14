@@ -21,11 +21,11 @@ def read(filename):
                 lines[i][j] = lines[i][j][1:-1]
     return lines
 
-def write(data, filename, user = False):
+def write(data, filename, note = ''):
     file = open(filename, 'a')
-    for i in range(len(data)-1):
+    for i in range(len(data)):
         temp = [str("'" + j + "'") if type(j) == str else str(j) for j in data[i]]
-        if user: temp.insert(0, data[-1])
+        if note != '': temp.insert(0, note)
         file.write(','.join(temp))
         file.write('\n')
     file.close()

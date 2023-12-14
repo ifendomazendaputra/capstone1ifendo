@@ -1,45 +1,16 @@
 import os, keyboard, time
 os.system('color')
 
-barang          = [['Abus sPRC91', '110091004', 'processor', 'pc', 19, 5700000],
-                   ['Acep pPRC72', '120072004', 'processor', 'pc', 17, 4500000],
-                   ['Samung gPRC53', '130053004', 'processor', 'pc', 13, 3900000],
-                   ['Legi hPRC94', '140094004', 'processor', 'pc', 11, 6200000],
-
-                   ['Abus sMOB31', '210031004', 'motherboard', 'pc', 6, 4400000],
-                   ['Acep pMOB32', '220032004', 'motherboard', 'pc', 12, 3600000],
-                   ['Samung gMOB33', '230033004', 'motherboard', 'pc', 9, 5100000],
-                   ['Legi hMOB34', '240034004', 'motherboard', 'pc', 2, 3800000],
-                   
-                   ['Abus sMEM18', '310018004', 'ram', 'pc', 2, 2900000],
-                   ['Acep pMEM22', '320022004', 'ram', 'pc', 5, 1800000],
-                   ['Samung gMEM24', '330024004', 'ram', 'pc', 9, 3500000],
-                   ['Legi hMEM16', '340016004', 'ram', 'pc', 12, 2400000],
-
-                   ['Abus sSTG11', '410011004', 'storage', 'pc', 18, 2800000],
-                   ['Acep pSTG21', '420021004', 'storage', 'pc', 15, 2500000],
-                   ['Samung gSTG11', '430011004', 'storage', 'pc', 7, 3100000],
-                   ['Legi hSTG41', '440041004', 'storage', 'pc', 3, 2200000],
-
-                   ['Abus sLED25', '510025004', 'monitor', 'pc', 4, 3500000],
-                   ['Acep pLED24', '520024004', 'monitor', 'pc', 10, 2800000],
-                   ['Samung gLED27', '530027004', 'monitor', 'pc', 3, 5100000],
-                   ['Legi hLED25', '540025004', 'monitor', 'pc', 20, 3000000],
-                   
-                   ['Abus sVGA39', '610039004', 'vga', 'pc', 15, 6200000],
-                   ['Acep pVGA37', '620037004', 'vga', 'pc', 14, 4500000],
-                   ['Samung gVGA29', '630029004', 'vga', 'pc', 10, 5900000],
-                   ['Legi hVGA36', '640036004', 'vga', 'pc', 8, 3000000]]
-
 def path(filename):
-    return os.path.join(os.sys.path[0],filename+'.txt')
+    return filename + '.txt'
+    # return os.path.join(os.sys.path[0],filename+'.txt')
 
 def read(filename):
     file = open(filename, 'r')
     lines = file.readlines()
     file.close()
-    lines = [data[:-1].split(', ')
-             if i != len(lines)-1 else data.split(', ') 
+    lines = [data[:-1].split(',')
+             if i != len(lines)-1 else data.split(',') 
              for i,data in enumerate(lines)]
     # print(lines)
     for i in range(len(lines)):
@@ -50,11 +21,11 @@ def read(filename):
                 lines[i][j] = lines[i][j][1:-1]
     return lines
 
-def write(data, filename):
+def write(data, filename, user = False):
     file = open(filename, 'a')
     for i in range(len(data)-1):
         temp = [str("'" + j + "'") if type(j) == str else str(j) for j in data[i]]
-        temp.insert(0, data[-1])
+        if user: temp.insert(0, data[-1])
         file.write(','.join(temp))
         file.write('\n')
     file.close()
@@ -151,7 +122,9 @@ def tambahitem(barang, cart):
             else:
                 print('\nStock Barang Tidak Mencukupi!')
         return barang, cart
-    except: return barang, cart
+    except:
+          error(), etc()
+          return barang, cart
 
 def hapusitem(barang, cart):
     try:
@@ -166,7 +139,9 @@ def hapusitem(barang, cart):
         else:
             print('\nTidak ada barang dengan indeks',indeks + 1)
             return barang, cart
-    except: return barang, cart
+    except:
+          error(), etc()
+          return barang, cart
 
 def updatejumlah(barang , cart):
     try:
@@ -187,7 +162,9 @@ def updatejumlah(barang , cart):
         else:
             print('\nTidak ada barang dengan indeks',indeks + 1)
             return barang, cart
-    except: return barang, cart
+    except:
+          error(), etc()
+          return barang, cart
 
 def lanjut(word):
     lanjut = input(f'Lanjutkan {word}? y/n : ').lower()
@@ -229,10 +206,11 @@ def pembayaran(cart):
             clear()
             print(f'Pembayaran "Cart ID : {len(cart)+1}"')
             show([['Nama Barang','ID Barang', 'Jumlah', 'Harga']] + cart)
-            diskon = int(input('Masukkan Persetase Diskon : ')) if input('Lanjut Tanpa Diskon?').lower() == 'y' else 0
+            diskon = int(input('Masukkan Persetase Diskon (%): ')) if input('\nLanjut Tanpa Diskon? (y/n)').lower() == 'n' else 0
             print('\nTotal yang Harus Dibayar =',total)
             if diskon != 0:
-                print('Total setelah diskon', total - (total*diskon)/100)
+                total = total - (total * diskon)/100
+                print('Total setelah diskon', total)
             try:
                 x = int(input('Masukkan jumlah uang : '))
                 if x >= total:
@@ -254,7 +232,6 @@ def pembayaran(cart):
 
 def kelolacart(barang, carts):
     print('on progress')
-
 
 def tambahstock(barang):
     while True:

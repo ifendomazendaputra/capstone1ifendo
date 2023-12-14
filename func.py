@@ -244,6 +244,7 @@ def tambahstock(barang):
                     found = True
                     break
             if not found:
+                if input('Barang, tidak ditemukan. input sebagai barang baru? y/n') == 'n' : break
                 barang.append([input('\nMasukkan Nama Barang\t\t: '), id,
                                input('Masukkan Jenis Barang\t\t: '),
                                input('Masukkan Segmen Barang\t\t: '),

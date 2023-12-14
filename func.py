@@ -236,6 +236,9 @@ def kelolacart(barang, carts):
 def tambahstock(barang):
     while True:
         try:
+            clear()
+            print('Tambah Stock\n')
+            show([['nama', 'id', 'jenis', 'segmen', 'stok', 'harga']] + barang)
             id, found = input('\nMasukkan ID Barang\t\t: '), False
             for i in range(len(barang)):
                 if id == barang[i][1]:

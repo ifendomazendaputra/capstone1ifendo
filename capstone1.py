@@ -34,8 +34,6 @@ while True:
             # barang, cart = kelolacart(barang, carts)
         
         elif pilihan == 3:                  #Tambah stock
-            print('Tambah Stock\n')
-            show([['nama', 'id', 'jenis', 'segmen', 'stok', 'harga']] + barang)
             barang = tambahstock(barang)
 
             os.remove(path('barang'))

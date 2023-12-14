@@ -15,14 +15,13 @@ while True:
             barang, cart = newcart(barang)
     
             if len(cart)!= 0 and cart[-1] == 'p':
-                cart[-1] = "'" + input('\nMasukkan Nama Pembeli : ') + "'"
-                write(cart, path('carts'), user = True)
+                cart.pop(-1)
+                write(cart, path('carts'), note = "'" + input('\nMasukkan Nama Pembeli : ') + "'")
                 os.system('notepad.exe ' + path('carts'))
                 continue
             
             if pembayaran(cart):
-                cart.append("'paid'")
-                write(cart, path('transactions'), user = True)
+                write(cart, path('transactions'), note = "'paid'")
                 os.system('notepad.exe ' + path('transactions'))
     
                 os.remove(path('barang'))
